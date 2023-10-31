@@ -571,4 +571,7 @@ input, select {
 .section1MainLeft_ {
   display: flex;
   gap: 2rem;
+}
+.section1MainLeft_ a {
+  display: block;
 }/*# sourceMappingURL=main.css.map */
