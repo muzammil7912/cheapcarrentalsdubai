@@ -1,0 +1,21 @@
+.banner {
+    &__Box {
+        position:relative;
+        img {
+            width:100%;
+        }
+        h2 {
+            position:absolute;
+            top:50%;
+            transform:translateY(-50%);
+            left:0;
+            right:0;
+            margin:0 auto;
+            border-bottom:2px solid #ddd;
+            color:#fff;
+            font-size:4rem;
+            width:fit-content;
+            padding-bottom:.5rem;
+        }
+    }
+}
