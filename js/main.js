@@ -1,7 +1,7 @@
 var Swipes = new Swiper('.swiper-container', {
     speed: 500,
     effect: "coverflow",
-    grabCursor: true,
+    // grabCursor: true,
     centeredSlides: true,
     slidesPerView: "auto",
     coverflowEffect: {
