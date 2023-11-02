@@ -699,13 +699,6 @@
         padding: 1rem 2rem;
         height: 15rem;
         transition: 0.3s;
-        &:hover {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          height: 100%;
-        }
 
         h4 {
           font-size: 2.7rem;
@@ -714,6 +707,16 @@
         p {
           font-size: 1.3rem;
           font-weight: 400;
+        }
+      }
+      &:hover {
+        .section7__Main-Card-body {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          transform: rotateX(360deg);
         }
       }
     }
@@ -847,7 +850,7 @@
               position: absolute;
               top: 50%;
               right: 1rem;
-              transform: translateY(-50%)
+              transform: translateY(-50%);
             }
             &.active {
               g path:nth-child(2) {
@@ -865,6 +868,101 @@
               border-top: 1px solid #ddd;
               padding: 2rem;
             }
+          }
+        }
+      }
+    }
+  }
+}
+.section10 {
+  padding: 6rem 0;
+  text-align: center;
+  h2 {
+    font-size: 4.5rem;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 2rem;
+  }
+  &_ {
+    width: 60%;
+    margin: 0 auto;
+
+    .cardd {
+      padding: 2rem 0;
+      &Img {
+        img {
+          width: 9rem;
+          height: 9rem;
+          border-radius: 50%;
+          outline-offset: 1rem;
+          outline: 0.2rem solid $secondary-color;
+        }
+      }
+      &Body {
+        h4 {
+          font-size: 3rem;
+          font-style: normal;
+          font-weight: 700;
+          margin-top: 3rem;
+        }
+        h6 {
+          font-size: 2rem;
+          font-weight: 400;
+        }
+        p {
+          color: #7C7C7C;
+font-size: 2.8rem;
+font-weight: 400;
+line-height: 4.2rem; /* 150% */
+        }
+      }
+    }
+    .swiper-slide-prev,
+    .swiper-slide-next {
+      .cardd {
+
+        &Img {
+          img {
+            width: 9rem;
+            height: 9rem;
+            border-radius: 50%;
+            outline-offset: 1rem;
+            outline: 0.2rem solid $secondary-color;
+          }
+        }
+        .carddBody {
+          display: none;  
+        }
+      }
+    }
+    .swiper-slide-prev {
+      .cardd {
+        &Img {
+          img {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            outline-offset: 1rem;
+            outline: 0.2rem solid $secondary-color;
+            top: 3rem;
+            position: relative;
+            left: 87%;
+          }
+        }
+      }
+    }
+    .swiper-slide-next {
+      .cardd {
+        &Img {
+          img {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            outline-offset: 1rem;
+            outline: 0.2rem solid $secondary-color;
+            top: 3rem;
+            position: relative;
+            right: 87%;
           }
         }
       }

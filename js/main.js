@@ -21,6 +21,22 @@ var Swipes = new Swiper(".swiper-container", {
     clickable: true,
   },
 });
+var Swipes2 = new Swiper(".section10mySwiper", {
+//   loop:true,
+    speed: 500,
+  slidesPerView: 1,
+  grabCursor: false,
+//   allowTouchMove: false,
+  centeredSlides: true,
+  autoplay: {
+      delay: 10000,
+      disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
 // $(".swiper-container").removeClass("swiper-3d")
 
 $(document).on("click", ".header__right-dropdown-Box-top2", function (e) {
@@ -53,3 +69,57 @@ $(".dropBrand").click(function(e) {
     e.preventDefault()
     // $(this).perent().addClass()
 })
+
+
+$(".ta1 .section5__left-list-Box").click(function() {
+    if(!$(this).hasClass("active")) {
+        $(".ta1 .section5__left-list-Box").removeClass("active")
+        $(".ta1 .section5__left-Body-Box").slideUp()
+        $(this).addClass("active")
+        $(`#${$(this).data("tab")}`).slideDown()
+    }
+})
+$(".ta2 .section5__left-list-Box").click(function() {
+    if(!$(this).hasClass("active")) {
+        $(".ta2 .section5__left-list-Box").removeClass("active")
+        $(".ta2 .section5__left-Body-Box").slideUp()
+        $(this).addClass("active")
+        $(`#${$(this).data("tab")}`).slideDown()
+    }
+})
+
+const textArray = [" Experience the Ultimate Selection of Cars Tailored to Your Needs,", " Experience the Ultimate Selection of Cars Tailored to Your Needs,", "Experience the Ultimate Selection of Cars Tailored to Your Needs,"];
+let textArrayIndex = 0;
+let charIndex = 0;
+
+const erase = () => {
+  if (charIndex > 0) {
+    $(".cursor").removeClass('blink');
+    $(".typed-text").text(textArray[textArrayIndex].slice(0, charIndex - 1));
+    charIndex--;
+    setTimeout(erase, 80);
+  } else {
+    $(".cursor").addClass('blink');
+    textArrayIndex++;
+    if (textArrayIndex > textArray.length - 1) {
+      textArrayIndex = 0;
+    }
+    setTimeout(type, 1000);
+  }
+}
+
+const type = () => {
+  if (charIndex <= textArray[textArrayIndex].length - 1) {
+    $(".cursor").removeClass('blink');
+    $(".typed-text").text($(".typed-text").text() + textArray[textArrayIndex].charAt(charIndex));
+    charIndex++;
+    setTimeout(type, 120);
+  } else {
+    $(".cursor").addClass('blink');
+    setTimeout(erase, 1000);
+  }
+}
+
+$(document).ready(() => {
+  type();
+});

@@ -104,3 +104,24 @@ gap: 4rem;
 .container {
   max-width: 86% !important;
 }
+
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  margin-left: 4px;
+  background: $secondary-color;
+}
+
+.cursor.blink {
+  animation: blink 0.8s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    background: $secondary-color;
+  }
+  40%, 50% {
+    background: transparent;
+  }
+}
