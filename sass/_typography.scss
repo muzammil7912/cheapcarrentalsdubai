@@ -3,15 +3,28 @@
 /* ------------------Typography------------------ */
 
 html {
-  font-size: 62.5%;
-  font-size: 0.625vw;
+  font-size: 55%;
+  // font-size: 0.625vw;
   scroll-behavior: smooth;
+}
+@media only screen and (max-width: 1600px) {
+  html {
+    font-size: 0.625vw;
+  }
+}
+@media only screen and (max-width: 979px) {
+  html {
+    font-size: 55%;
+    }
+
 }
 // font-family: 'Hurricane', cursive; 
 body {
 font-family: 'Poppins', sans-serif;
   color: $font-color;
   font-size: 1.6rem;
+  max-width:170rem;
+  margin: 0 auto;
   overflow-x: hidden;
 }
 body::-webkit-scrollbar-thumb {
@@ -124,4 +137,42 @@ gap: 4rem;
   40%, 50% {
     background: transparent;
   }
+}
+
+#menu:not(.mm-menu) {
+  display: none;
+}
+
+.main_mmenu {
+  position: relative;
+  display: none;
+  vertical-align: middle;
+}
+
+.menu_icn {
+  display: block;
+  padding-left: 10px;
+}
+
+#page {
+  display: none;
+}
+
+
+#menu {
+  z-index: 9999;
+}
+
+.mm-listview {
+  overflow: auto;
+}
+
+.loader {
+  position: fixed;
+  background-color: #fff;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
 }

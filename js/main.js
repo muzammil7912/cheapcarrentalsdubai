@@ -12,10 +12,10 @@ var Swipes = new Swiper(".swiper-container", {
     modifier: 1,
     slideShadows: true,
   },
-//   autoplay: {
-//       delay: 10000,
-//       disableOnInteraction: false,
-//   },
+  autoplay: {
+      delay: 10000,
+      disableOnInteraction: false,
+  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -123,3 +123,37 @@ const type = () => {
 $(document).ready(() => {
   type();
 });
+
+
+$(window).on('scroll', function() {
+  if ($(this).scrollTop() > 100) {
+      $('.header').addClass('go-top');
+      // $('.logo_side').addClass('hide');
+      // $('.logo_side_2').removeClass('hide');
+  } else {
+      $('.header').removeClass('go-top');
+      // $('.logo_side').removeClass('hide');
+      // $('.logo_side_2').addClass('hide');
+  }
+});
+
+jQuery(document).ready(function($) {
+  $("#menu").mmenu({
+      "extensions": ["effect-menu-zoom", "effect-panels-zoom", "pagedim-black", "theme-dark"],
+      "offCanvas": {
+          "position": "right"
+      },
+      "counters": true,
+      "iconPanels": true,
+     
+  });
+});
+// menu close
+
+document.onreadystatechange = function() {
+  var state = document.readyState
+  if (state == 'complete') {
+    $(".loader").hide()
+  }
+
+}

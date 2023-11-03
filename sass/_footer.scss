@@ -1,0 +1,170 @@
+.footer {
+    position: relative;
+    &Img {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 35rem;
+    }
+  &__top {
+    background: #000636;
+    // backdrop-filter: blur(35.5px);
+    padding: 1.5rem 0;
+
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: 10rem;
+      li {
+        a {
+          position: relative;
+          color: #fff;
+          font-size: 1.8rem;
+          font-weight: 500;
+          &::before {
+            content: "";
+            position: absolute;
+            left: -5rem;
+            top: 10%;
+            width: 0.2rem;
+            height: 80%;
+            opacity: 0.3;
+            background: #fff;
+          }
+        }
+
+        &:first-child {
+          a {
+            &::before {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__Bottom {
+    padding: 6rem 0;
+    background: #00031e;
+    &- {
+      display: flex;
+      justify-content: center;
+    }
+    &_ {
+      display: grid;
+      grid-template-columns: 0.8fr 1.4fr 1fr;
+      color: #fff;
+      gap: 10rem;
+      margin-top: 3rem;
+
+      &Box {
+        h4 {
+          font-size: 2rem;
+          font-weight: 500;
+        }
+        p {
+          color: #7c7c7c;
+          font-size: 1.6rem;
+          font-weight: 400;
+        }
+        &_ {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 3rem;
+
+          &2 {
+            li {
+              font-size: 1.4rem;
+              font-weight: 400;
+              a {
+                color: #fff;
+              }
+            }
+          }
+        }
+        .footernum {
+          display: flex;
+          gap: 2rem;
+          margin-bottom: 2rem;
+          &_l {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 0.6rem;
+            background: rgba(255, 255, 255, 0.1);
+            display: grid;
+            place-items: center;
+            img {
+              width: 43%;
+            }
+          }
+          &_r {
+            h5 {
+              color: $secondary-color;
+              font-size: 1.2rem;
+              font-weight: 500;
+              margin: 0;
+            }
+            li {
+                font-size: 1.6rem;
+                font-weight: 500;
+                a {
+                    color: #fff;
+                }
+                span {
+                    color: $secondary-color;
+                }
+            }
+          }
+        }
+      }
+    }
+    &A {
+        display: grid;
+      grid-template-columns: 0.8fr 1.4fr 1fr;
+      color: #fff;
+      gap: 10rem;
+      margin: 3rem 0;
+      align-items: end;
+
+      &Box {
+        ul.cer {
+            display: flex;
+            li:last-child {
+                margin-left: 1.5rem;
+            }
+        }
+        .visa {
+            display: flex;
+            gap: 1rem;
+        }
+        .social {
+            display: flex;
+            gap: 1rem;
+        }
+      }
+    }
+    &term {
+        position: relative;
+        padding-top: 3rem;
+        ul {
+            display: flex;
+            gap: 5rem;
+            justify-content: center;
+            li {
+                color: #929292;
+                font-size: 1.5rem;
+                font-weight: 400;
+            }
+            span {
+                color: #929292;
+                font-size: 1.5rem;
+                
+            }
+            a {
+                color: #929292;
+                
+            }
+        }
+    }
+  }
+}

@@ -272,6 +272,7 @@
       font-size: 4.4rem;
       font-style: italic;
       font-weight: 700;
+      height: 12rem;
     }
     p {
       color: #000;
@@ -350,6 +351,7 @@
             }
             h5 {
               margin: 0;
+              color: red;
             }
           }
         }
@@ -693,18 +695,29 @@
         left: 0;
         width: 100%;
         border-radius: 5px;
-        background: rgba(0, 0, 0, 0.2);
-        backdrop-filter: blur(10px);
         color: #fff;
         padding: 1rem 2rem;
         height: 15rem;
         transition: 0.3s;
+        &::before{
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          content: '';
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+          background: rgba(0, 0, 0, 0.2);
+          backdrop-filter: blur(10px);
+        }
 
         h4 {
+          position: relative;
           font-size: 2.7rem;
           font-weight: 500;
         }
         p {
+          position: relative;
           font-size: 1.3rem;
           font-weight: 400;
         }
@@ -716,7 +729,9 @@
           align-items: center;
           justify-content: center;
           height: 100%;
-          transform: rotateX(360deg);
+          &::before{
+            transform: rotateX(360deg);
+          }
         }
       }
     }
@@ -968,6 +983,18 @@ line-height: 4.2rem; /* 150% */
       }
     }
   }
+  .swiper-pagination {
+    margin-top: 3rem;
+    position: relative;
+    .swiper-pagination-bullet {
+      width: 1.5rem;
+      height: 1.5rem;
+      &.swiper-pagination-bullet-active {
+        background: yellow;
+      }
+    }
+  }
 }
 @import "./footer";
 @import "./innerPage";
+@import "./responsive";
