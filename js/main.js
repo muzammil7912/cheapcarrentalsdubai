@@ -37,6 +37,22 @@ var Swipes2 = new Swiper(".section10mySwiper", {
     clickable: true,
   },
 });
+var Swipes3 = new Swiper(".section8MobileViewSwiper", {
+//   loop:true,
+    speed: 500,
+  slidesPerView: 1,
+  grabCursor: false,
+//   allowTouchMove: false,
+  centeredSlides: true,
+  autoplay: {
+      delay: 10000,
+      disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
 // $(".swiper-container").removeClass("swiper-3d")
 
 $(document).on("click", ".header__right-dropdown-Box-top2", function (e) {

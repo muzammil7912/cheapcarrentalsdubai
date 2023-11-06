@@ -1,0 +1,139 @@
+.navigationss {
+  li {
+    font-weight: 500;
+    color: $secondary-color;
+
+    a {
+      color: #000;
+    }
+  }
+}
+
+.aboutBanner {
+  padding: 3rem 0;
+  &__ {
+    gap: 4rem;
+    padding: 1rem;
+    &left {
+      width: 55%;
+      h2 {
+        font-size: 4.5rem;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      h5 {
+        color: #7c7c7c;
+        font-size: 1.8rem;
+        font-weight: 500;
+      }
+      p {
+        color: #7c7c7c;
+        font-size: 1.4rem;
+        font-weight: 500;
+      }
+    }
+    &right {
+      width: 45%;
+      img {
+        width: 100%;
+        border-radius: 2rem;
+      }
+    }
+  }
+}
+
+.sectioncoreValue {
+    padding: 5rem 0;
+    background: #DEE2FF;
+  &Main {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+
+    &__left {
+      h2 {
+        font-size: 4rem;
+        font-weight: 700;
+      }
+      p {
+        color: #7c7c7c;
+        font-size: 1.2rem;
+        font-style: italic;
+        font-weight: 600;
+      }
+      ul {
+        li {
+          position: relative;
+          padding-left: 2.6rem;
+          line-height: 3.1rem; /* 262.5% */
+          font-size: 1.2rem;
+          font-weight: 400;
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: .7rem;
+            background: url(../webImages/about/Group288.png) no-repeat;
+            width: 1.5rem;
+            height: 1.2rem;
+          }
+        }
+      }
+    }
+    &__right {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        h3 {
+font-size: 6rem;
+font-weight: 400;
+text-transform: capitalize;
+        }
+        p {
+font-size: 2.3rem;
+font-weight: 400;
+text-transform: capitalize;
+        }
+        img {
+            width: 15.7rem;
+        }
+    }
+  }
+}
+
+
+
+.innerPage {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 0.5rem;
+        opacity: 0.1;
+        background: #3348f5;
+        -webkit-backdrop-filter: blur(2.75rem);
+        backdrop-filter: blur(2.75rem);
+    }
+    .section9_::before {
+        display: none;
+    }
+    .section9 {
+        &_Body {
+            &- {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}
+
+.map {
+    margin-top: 5rem;
+    iframe {
+        width: 100%;
+        border: 1px solid transparent;
+        height: 25rem;
+        vertical-align: bottom;
+    }
+}
